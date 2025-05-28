@@ -22,13 +22,16 @@ st.set_page_config(
     page_icon="📚"
     )
 st.title("🧠 Clasificación de Emociones en Texto")
-st.write("""Es una tarea de clasificación de texto con el **GoEmotions dataset**: 
-         The GoEmotions dataset contiene 58k comentarios de Reddit cuidadosamente seleccionados y etiquetados según 27 categorías de emociones o Neutral. 
-         (Los modelos de redes están entrenados con datos en inglés, 
+st.write("""Es una tarea de clasificación de texto con el **GoEmotions dataset**:
+         \n- El **dataset GoEmotions** contiene 58k comentarios de Reddit cuidadosamente seleccionados y etiquetados según 27 categorías de emociones o Neutral.""")
+
+st.info("""Los modelos neuronales están entrenados con datos en inglés, 
          por lo que, para aprovechar la predicción, 
-         es recomendable ingresar frases en inglés.)""")
+         es recomendable ingresar frases en inglés.""", icon=":material/info:")
 
 st.write("Para interactuar con el clasificador de emociones, elije uno de los modelos e ingresa una frase y el modelo predecirá la emoción principal y mostrará la confianza de las 5 emociones más probables. ")
+
+st.write("**DATASET**: [Google Research Datasets - GoEmotions](https://huggingface.co/datasets/google-research-datasets/go_emotions)")
 
 st.divider()
 
@@ -37,7 +40,9 @@ cols = st.columns(2)
 if cols[0].button("RNN", use_container_width=True):
     st.session_state.rnn = True
     st.session_state.transformers = False
+    st.switch_page("pages/1_📚_RNN.py")
     
 if cols[1].button("Transformers", use_container_width=True):
     st.session_state.rnn = False
     st.session_state.transformers = True
+    st.switch_page("pages/2_📚_Transformers.py")
