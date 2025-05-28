@@ -1,0 +1,11 @@
+[project]
+name = "rnn-transformers"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "datasets>=3.6.0",
+    "ipykernel>=6.29.5",
+    "streamlit>=1.45.1",
+]
