@@ -8,6 +8,10 @@ def cargar_modelo_tf():
     modelo = keras.models.load_model("data/ModeloTransformers1.h5", compile=False)
     return modelo
 
+def cargar_modelo_rnn():
+    modelo = keras.models.load_model("data/ModeloEmbeddingNoMask1.h5", compile=False)
+    return modelo
+
 def cargar_variables_texto():
     # Cargar vocabulario
     with open("data/vocabulario.txt", "r", encoding="utf-8") as f:
