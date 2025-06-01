@@ -77,7 +77,7 @@ if cols[1].button("Transformers", use_container_width=True):
     st.session_state.transformers = True
 
 # Mostrar input solo si se ha seleccionado un modelo
-if st.session_state.rnn or st.session_state_transformers:
+if st.session_state.rnn or st.session_state.transformers:
     user_input = st.text_input("✍️ Escriba la frase que gustes (en inglés):")
 
     if st.button("🔍 Predecir emoción") and user_input:
