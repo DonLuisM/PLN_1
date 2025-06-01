@@ -12,3 +12,7 @@ wheels/
 Entregable_NLP_DS_DL_2025_01.pdf
 prueba.py
 data/multi_news_local/
+
+data/ModeloEmbedingMask2.h5
+data/ModeloEmbedingGRU3.h5
+data/embedding_glove6b/glove.6B.100d.txt
