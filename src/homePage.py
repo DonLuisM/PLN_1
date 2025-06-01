@@ -4,10 +4,8 @@ from tensorflow import keras
 from tensorflow.keras.layers import TextVectorization
 import numpy as np
 
-
-# * Configuración de funciones
-def cargar_modelo():
-    modelo = keras.models.load_model("data/ModeloEntrenado.h5", compile=False)
+def cargar_modelo_tf():
+    modelo = keras.models.load_model("data/ModeloTransformers1.h5", compile=False)
     return modelo
 
 def cargar_variables_texto():
