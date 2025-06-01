@@ -1,9 +1,9 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
-from homePage import cargar_modelo_tf, cargar_variables_texto
+from homePage import cargar_modelo_rnn, cargar_variables_texto
 
-modelo = cargar_modelo()
+modelo = cargar_modelo_rnn()
 vocab, text_vectorization, etiquetas = cargar_variables_texto()
 
 st.header("🧠 Modelos de Redes Neuronales Recurrentes actuando")
